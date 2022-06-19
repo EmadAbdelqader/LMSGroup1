@@ -36,30 +36,6 @@ namespace LMSGroup1.ConsoleTesting
             //usersBo.Save(usr);
 
             usersBo.FakeDelete(2);
-
-            Get();
-        }
-
-        public static void Get()
-        {
-            string connectionString = "data source=.; database=LMDB; Integrated Security=SSPI";
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                using (SqlCommand command = connection.CreateCommand())
-                {
-                    command.CommandText = "SELECT * FROM LookUp ;";
-                    //SqlDataReader reader = command.ExecuteReader();
-                    using (SqlDataReader reader = command.ExecuteReader())
-                    {
-                        while (reader.Read())
-                        {
-                            Console.WriteLine(reader["LookupDescription"]);
-                        }
-                    }
-                }
-            }
         }
     }
 }
