@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9" name="LMSDbContext">
+  <DataContextMoniker Name="/LMSDbContext" />
+  <nestedChildShapes>
+    <classShape Id="04dee76d-18e6-4062-aa0e-409a59de7b72" absoluteBounds="6.75, 0.75, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/LMSDbContext/Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f153c61c-c4d2-4b44-ad63-175932b92311" absoluteBounds="6.765, 1.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c4b792a9-67c1-434e-a620-5ccfed7cddbf" absoluteBounds="3.5, 1.25, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/LMSDbContext/LeaveApplication" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be8d2ffa-b95a-43d4-a473-615e823c32d9" absoluteBounds="3.515, 1.71, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4007b455-dc41-44d2-88c9-d5ad64961b24" absoluteBounds="3.5, 6, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/LMSDbContext/LookUp" />
+      <nestedChildShapes>
+        <elementListCompartment Id="02b25b9c-138d-460f-83af-02993bb1d7d7" absoluteBounds="3.515, 6.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b009f20e-651f-4407-9db3-ed8819221777" absoluteBounds="0.75, 6.125, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/LMSDbContext/LookUpType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91711974-99f1-4b23-9349-28a3677fe525" absoluteBounds="0.765, 6.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 7.29890055338542); (3.5 : 7.29890055338542)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/LMSDbContext/LookUpType/LookUpType_LookUp" />
+      <nodes>
+        <classShapeMoniker Id="b009f20e-651f-4407-9db3-ed8819221777" />
+        <classShapeMoniker Id="4007b455-dc41-44d2-88c9-d5ad64961b24" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d027ffb9-2f79-4f5d-b9f8-ead7f53bda65" absoluteBounds="0.875, 1, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/LMSDbContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a092e02e-4b82-47ee-9c57-e418a9686362" absoluteBounds="0.89000000000000012, 1.46, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.875 : 2.90465413411458); (3.5 : 2.90465413411458)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LMSDbContext/User/User_LeaveApplication" />
+      <nodes>
+        <classShapeMoniker Id="d027ffb9-2f79-4f5d-b9f8-ead7f53bda65" />
+        <classShapeMoniker Id="c4b792a9-67c1-434e-a620-5ccfed7cddbf" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
