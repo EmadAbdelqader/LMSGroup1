@@ -87,7 +87,7 @@ namespace LMSGroup1.BAL
 
             newUser.FirstName = _user.FirstName;
             newUser.LastName = _user.LastName;
-            newUser.UserName = _user.UserName;
+            newUser.Username = _user.Username;
 
 
             if (isInsert == true)

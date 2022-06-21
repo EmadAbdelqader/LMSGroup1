@@ -34,6 +34,7 @@ namespace LMSGroup1.ConsoleTesting
             //};
 
             //usersBo.Save(usr);
+            string E = "Ahmad";
 
             usersBo.FakeDelete(2);
         }
