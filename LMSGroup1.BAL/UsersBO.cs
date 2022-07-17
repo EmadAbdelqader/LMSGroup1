@@ -17,6 +17,14 @@ namespace LMSGroup1.BAL
 
         #endregion
 
+        #region Public Properties
+
+        public int UserId { get; set; }
+        public string FirstName { get; set; }
+        public int IsDeleted { get; set; }
+
+        #endregion
+
         #region Constructors
 
         /// <summary>
@@ -35,6 +43,23 @@ namespace LMSGroup1.BAL
         {
             // SELECT * FROM Users;
             return dc.Users.ToList();
+        }
+
+        public List<User> GetUsersBySearch()
+        {
+            // SELECT * FROM USER Where "" = ""
+            var Query =
+                from u in dc.Users
+                orderby u.FirstName
+                where
+                (UserId == -1 || u.UserId == UserId) &&
+                (FirstName == String.Empty || u.FirstName.Contains(FirstName)) &&
+                (IsDeleted == -1 || u.IsDeleted == Convert.ToBoolean(IsDeleted))
+                select u;
+
+            var result = Query.ToList();
+
+            return result;
         }
 
         public User GetUserById(int userId) // 2
